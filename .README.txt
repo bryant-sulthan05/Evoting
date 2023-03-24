@@ -1,0 +1,20 @@
+#Untuk mengakses admin
+localhost/evoting/view/admin
+
+username/email : admin@gmail.com
+password : 123
+
+#Untuk mengakses murid
+localhost/evoting/view/students
+
+username/email : bryant@gmail.com
+password : 123
+
+#Direktori
+- Folder database terdapat file database website
+- Folder public berisi asset framework dan foto
+- Folder view berisi
+  - Folder komponen berisi komponen seperti meta, navbar, dll.
+  - Folder query berisi kumpulan query
+  - Folder student berisi tampilan untuk halaman murid, anggota osis, dan kandidat
+  - Folder admin berisi tampilan untuk halaman admin
