@@ -13,6 +13,7 @@ if (isset($_POST['continue'])) :
             $getCodes = $config->query("SELECT * FROM verify_code WHERE code_id = '$code_id'");
             $getCode = mysqli_fetch_assoc($getCodes);
             $_SESSION['code'] = $getCode['code'];
+            $forgot_pass = mail('bryant7350@gmail.com', 'Forgot Password', $getCode['code']);
             echo "
             <script>
                 document.location.href = 'forgotPassword.php?page=verifikasi';

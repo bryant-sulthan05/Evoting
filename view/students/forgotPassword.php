@@ -30,7 +30,6 @@ $pages = isset($_GET['page']) ? $_GET['page'] : '';
                     </div>
                     <div class="card-content mt-5">
                         <?php if ($pages == 'verifikasi') : ?>
-                            <div class="alert alert-danger">Kode Verifikasi : <span class="fw-bold"><?= $_SESSION['code'] ?></span></div>
                             <form action="" method="post" enctype="multipart/form-data">
                                 <span class="fw-bold">Masukkan kode verifikasi :</span>
                                 <input type="text" name="verify" id="verify" class="form-control mb-1" placeholder="Masukkan Kode Verifikasi">
