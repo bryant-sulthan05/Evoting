@@ -29,15 +29,7 @@ $pages = isset($_GET['page']) ? $_GET['page'] : '';
                         <h5 class="fw-bold text-center">Lupa Password</h5>
                     </div>
                     <div class="card-content mt-5">
-                        <?php if ($pages == 'verifikasi') : ?>
-                            <form action="" method="post" enctype="multipart/form-data">
-                                <span class="fw-bold">Masukkan kode verifikasi :</span>
-                                <input type="text" name="verify" id="verify" class="form-control mb-1" placeholder="Masukkan Kode Verifikasi">
-                                <div class="d-flex justify-content-center mt-4">
-                                    <button type="submit" name="lanjut" id="lanjut" class="btn fw-bold">Lanjut</button>
-                                </div>
-                            </form>
-                        <?php elseif ($pages == 'ubah_password') : ?>
+                        <?php if ($pages == 'ubah_password') : ?>
                             <form action="" method="post" enctype="multipart/form-data">
                                 <span class="fw-bold">Password baru :</span>
                                 <input type="password" name="pass" id="pass" class="form-control mb-1" placeholder="Masukkan Password Baru">
@@ -46,7 +38,13 @@ $pages = isset($_GET['page']) ? $_GET['page'] : '';
                                     <button type="submit" name="save" id="save" class="btn fw-bold">Simpan</button>
                                 </div>
                             </form>
-                        <?php else : ?>
+                        <?php else :
+                            if (isset($_SESSION['code'])) :
+                                echo "<div class='alert alert-warning'>
+                                Silahkan cek email untuk memasuki tautan ubah password
+                                </div>";
+                            endif;
+                        ?>
                             <form action="" method="post" enctype="multipart/form-data">
                                 <span class="fw-bold">Email :</span>
                                 <input type="email" name="email" id="email" class="form-control mb-1" placeholder="Masukkan Email">

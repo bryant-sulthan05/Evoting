@@ -13,10 +13,11 @@ if (isset($_POST['continue'])) :
             $getCodes = $config->query("SELECT * FROM verify_code WHERE code_id = '$code_id'");
             $getCode = mysqli_fetch_assoc($getCodes);
             $_SESSION['code'] = $getCode['code'];
-            $forgot_pass = mail('bryant7350@gmail.com', 'Forgot Password', $getCode['code']);
+            $getLocalIp = "<a href='192.168.0.104/evoting/view/students/forgotPassword.php?page=ubah_password'>Klik disini untuk ubah password</a>";
+            $forgot_pass = mail('bryant7350@gmail.com', 'Forgot Password', $getLocalIp);
             echo "
             <script>
-                document.location.href = 'forgotPassword.php?page=verifikasi';
+                document.location.href = 'forgotPassword.php';
             </script>
             ";
         else :
