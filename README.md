@@ -12,3 +12,12 @@ Akun Admin<br/>
 Email : admin1@gmail.com<br/>
 password : 123
 
+#Direktori
+- Folder database terdapat file database website
+- Folder public berisi asset framework dan foto
+- Folder view berisi
+  - Folder komponen berisi komponen seperti meta, navbar, dll.
+  - Folder query berisi kumpulan query
+  - Folder student berisi tampilan untuk halaman murid, anggota osis, dan kandidat
+  - Folder admin berisi tampilan untuk halaman admin
+
